@@ -51,18 +51,18 @@ Mastering these CSS techniques enables the creation of highly interactive web el
 
 ### `0-styles.css`
 
-![[Sprite languages.png]]
+![0-styles.css](images/Sprite%20languages.png)
 
 ### `1-styles.css`
 
-![[Move the (under)line.gif]]
+![1-styles.css](images/Move%20the%20(under)line.gif)
 
 ### `2-styles.css`
 
-![[Toggle1.png]] ![[Toggle2.png]]
+![2-styles.css](images/Toggle1.png) ![2-styles.css](images/Toggle2.png)
 
 ### `3-styles.css`
 
-![[Menu.gif]]
+![3-styles.css](images/Menu.gif)
 
 ---
