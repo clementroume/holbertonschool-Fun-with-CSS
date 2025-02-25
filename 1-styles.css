@@ -1,0 +1,70 @@
+/* 
+=============================
+  RESET & GLOBAL STYLES
+=============================
+*/
+
+/* Reset margins and paddings to ensure a consistent layout */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply full height and define the global font */
+html,
+body {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Center content on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+=============================
+  HEADINGS (TITLES)
+=============================
+*/
+
+/* General styling for h2 elements */
+h2 {
+  font-size: 50px;
+}
+
+/* 
+=============================
+  LINK STYLING UNDER h2
+=============================
+*/
+
+/* Base link styling */
+h2 a {
+  color: #aa203e;
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Animated underline effect */
+h2 a::after {
+  content: ''; /* Invisible element used for underline */
+  position: absolute;
+  width: 0; /* Initially hidden */
+  height: 4px; /* Underline thickness */
+  bottom: 0;
+  left: 0;
+  background-color: #aa203e; /* Same color as the text */
+  transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* On hover, the underline expands */
+h2 a:hover::after {
+  width: 100%;
+}

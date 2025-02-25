@@ -1,0 +1,195 @@
+/* 
+=============================
+  RESET & GLOBAL STYLES
+=============================
+*/
+
+/* Reset margins and paddings for a consistent layout */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set full height and global font */
+html,
+body {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Center content on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+=============================
+  MENU STYLES
+=============================
+*/
+
+/* Container for the menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: fixed;
+  top: 100px;
+}
+
+/* Hide the checkbox used for toggling */
+.menu-open {
+  display: none;
+}
+
+/* 
+=============================
+  MENU TOGGLE BUTTON
+=============================
+*/
+
+/* Style for the main toggle button */
+.menu-open-button {
+  width: 75px;
+  height: 75px;
+  background-color: #e00a3c;
+  border-radius: 50%;
+  position: fixed;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the toggle button when menu is closed */
+.menu-open:not(:checked) ~ .menu-open-button:hover {
+  transform: scale(1.2);
+}
+
+/* Slightly enlarge the button when menu is closed */
+.menu-open:not(:checked) ~ .menu-open-button {
+  width: 100px;
+  height: 100px;
+}
+
+/* 
+=============================
+  MENU ICON LINES (HAMBURGER)
+=============================
+*/
+
+.menu-line {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Position the first and third lines */
+.menu-line-1 {
+  top: 40%;
+}
+.menu-line-3 {
+  top: 60%;
+}
+
+/* Hide the middle line and transform others into an "X" when checked */
+.menu-open:checked ~ .menu-open-button .menu-line-2 {
+  display: none;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line-1 {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line-3 {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+/* 
+=============================
+  MENU ITEMS
+=============================
+*/
+
+/* Default state: hidden and positioned under the toggle button */
+.menu-item {
+  width: 75px;
+  height: 75px;
+  background-color: #e00a3c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 30px;
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* Show menu items and move them downward when the menu is opened */
+.menu-open:checked ~ .menu-item {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-open:checked ~ .menu-item:nth-of-type(1) {
+  transform: translateY(90px);
+}
+.menu-open:checked ~ .menu-item:nth-of-type(2) {
+  transform: translateY(180px);
+}
+.menu-open:checked ~ .menu-item:nth-of-type(3) {
+  transform: translateY(270px);
+}
+.menu-open:checked ~ .menu-item:nth-of-type(4) {
+  transform: translateY(360px);
+}
+.menu-open:checked ~ .menu-item:nth-of-type(5) {
+  transform: translateY(450px);
+}
+
+/* Hide menu items and bring them back under the toggle button when closing */
+.menu-open:not(:checked) ~ .menu-item {
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out,
+    visibility 0s linear 0.4s;
+  visibility: hidden;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+  background-color: #ffffff;
+  border: solid 1px #e00a3c;
+}
+
+/* 
+=============================
+  ICON STYLES
+=============================
+*/
+
+.fa {
+  color: #ffffff;
+}
+
+/* Change icon color on hover */
+.menu-item:hover .fa {
+  color: #e00a3c;
+}
