@@ -36,6 +36,7 @@ The repository contains the following stylesheets, each implementing a unique CS
 ## Learning Objectives
 
 By the end of this project, the following concepts should be mastered:
+
 - Implement **sprite-based** icons using CSS background positioning.
 - Use **CSS transitions** to create smooth visual effects.
 - Design **custom UI components** such as toggles and menus purely with HTML and CSS.
